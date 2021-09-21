@@ -8,7 +8,7 @@ export class OffersController {
     @Get()
     getHealthCheck(): string {
         return this.offersService.getOffers();
- }
+    }
 
 
 }
