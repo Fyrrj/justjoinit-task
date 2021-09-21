@@ -1,7 +1,11 @@
 import { Box } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export const OffersList = () => {
+  useEffect(() => {
+    // TODO Here you might make a proper request from http://localhost:3001
+  }, []);
+
   return (
     <Box
       display="flex"
