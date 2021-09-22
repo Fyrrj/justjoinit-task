@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 
 export const OffersList = () => {
@@ -7,14 +7,13 @@ export const OffersList = () => {
   }, []);
 
   return (
-    <Box
-      display="flex"
+    <Flex
       alignItems="center"
       justifyContent="center"
       backgroundColor="#19a56f"
       height="100%"
     >
       <Box fontSize={24}>List</Box>
-    </Box>
+    </Flex>
   );
 };

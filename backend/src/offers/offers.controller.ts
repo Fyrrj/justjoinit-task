@@ -9,6 +9,4 @@ export class OffersController {
     getHealthCheck(): string {
         return this.offersService.getOffers();
     }
-
-
 }

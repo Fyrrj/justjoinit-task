@@ -1,16 +1,15 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
 
 export const Header = () => {
   return (
-    <Box
+    <Flex
       height={100}
-      display="flex"
       alignItems="center"
       justifyContent="center"
       backgroundColor="#dedede"
     >
       <Box fontSize={24}>Header</Box>
-    </Box>
+    </Flex>
   );
 };
