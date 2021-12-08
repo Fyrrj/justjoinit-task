@@ -1,12 +1,14 @@
-import {Controller, Get} from '@nestjs/common';
-import {OffersService} from "src/offers/offers.service";
+import { Controller, Get, Query } from "@nestjs/common";
+import { OffersService } from "src/offers/offers.service";
+import { OffersInterface } from "./offers.interface";
 
-@Controller('offers')
+@Controller("offers")
 export class OffersController {
-    constructor(private readonly offersService: OffersService) {}
+  constructor(private readonly offersService: OffersService) {}
 
-    @Get()
-    getHealthCheck(): string {
-        return this.offersService.getOffers();
-    }
+  @Get()
+  findAll(@Query("title") title: string): OffersInterface[] {
+    const metadata = { title };
+    return this.offersService.getOffers(metadata);
+  }
 }
